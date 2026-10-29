@@ -17,23 +17,23 @@ export class UploadFileComponent {
   ) {}
 
   uploadFile() : void {
-    let file = this.fichero.nativeElement.files[0];
+    const file = (this.fichero.nativeElement as HTMLInputElement).files?.[0];
 
     if(file){
 
       const reader = new FileReader();
 
       reader.onload = () => {
-        const fileString = reader.result as string;
+        const fileString = (reader.result as string).split(',')[1];
 
-        let fichero : File = new File(
+        const fichero : File = new File(
           file.name, fileString
         );
 
         this._service.uploadFile(fichero)
           .subscribe({
             next: (res) => console.log("Uploaded!"),
-            error: (err) => console.error("No se pudo subir el fichero!")
+            error: (err) => console.error("No se pudo subir el fichero!", err)
           })
       }
 

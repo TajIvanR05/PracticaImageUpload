@@ -1,9 +1,9 @@
 <h1>Upload file</h1>
 
-<form method="post" enctype="multipart/form-data" id="uploadForm">
+<form (ngSubmit)="uploadFile()" id="uploadForm">
     <p class="text-muted">Selecciona un archivo para subirlo.</p>
     <input type="file" id="fileInput" name="fichero" #fichero accept="image/*" class="form-control mb-3">
-    <button (click)="uploadFile()" type="submit" id="uploadBtn" class="btn btn-info w-100">
+    <button type="submit" id="uploadBtn" class="btn btn-info w-100">
         <i class="bi bi-upload me-2"></i>Subir fichero
     </button>
 </form>
