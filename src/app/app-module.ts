@@ -7,9 +7,10 @@ import { UploadFileComponent } from './components/upload-file-component/upload-f
 import { provideHttpClient } from '@angular/common/http';
 import { FileService } from './services/service.files';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu-component/menu-component';
 
 @NgModule({
-  declarations: [App, UploadFileComponent],
+  declarations: [App, UploadFileComponent, MenuComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), FileService],
   bootstrap: [App],
