@@ -1,0 +1,15 @@
+<h1>Equipo Component</h1>
+
+<div class="d-flex flex-row">
+    @for (team of equipos; track team){
+        <div class="card" style="width: 12rem;">
+            <img src={{team.imagen}} class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{team.nombre}}</h5>
+                <p class="card-text">
+                    Champions: {{team.champions}}
+                </p>
+            </div>
+        </div>
+    }
+</div>

@@ -5,7 +5,8 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-
+    background-color: gray;
+    padding: 10px;
 }
 
 nav aside {
@@ -14,4 +15,5 @@ nav aside {
 
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
